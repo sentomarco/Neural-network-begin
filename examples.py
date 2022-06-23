@@ -33,13 +33,13 @@ elif EXERCISE==2:
 
 
 elif EXERCISE==3:
+	#This is a multi-layer Perceptron, realized in a educational, clear, way
+	
 	#An EXOR can't be realized by only one Perceptron! the trasfer function doesn't allow a single linear separation between the cathegories
 	#Three Perceptron are neeeded, the arrengement rassemble the classic IC implementation of an EXOR:
 	#EXOR = AND(NAND,OR)
 
 	print("\nDescrete example of XOR gate:\n")
-	#This is a multi-layer Perceptron
-	#NB the bias normally are all 1.0 and change only the weights 
 
 	neuron_nand = Perceptron(inputs=2)	 # AND * -1
 	neuron_nand.set_weights(np.array([10,10,-15])*-1)  # NAND ( [...]*-1 doesn't work )
@@ -49,7 +49,7 @@ elif EXERCISE==3:
 
 	neuron_and = Perceptron(inputs=2)
 	neuron_and.set_weights([10,10,-15])	   # AND
-
+	#NB the bias normally are all 1.0 and change only the weights 
 
 	A, B = 0, 0
 	Y1 = neuron_nand.run([A, B])
